@@ -1,0 +1,3 @@
+/home/tosiek/Documents/II_semestr/PP2/az_math/cmake-build-debug/CMakeFiles/az_math.dir
+/home/tosiek/Documents/II_semestr/PP2/az_math/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tosiek/Documents/II_semestr/PP2/az_math/cmake-build-debug/CMakeFiles/rebuild_cache.dir

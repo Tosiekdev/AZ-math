@@ -1,0 +1,492 @@
+\hypertarget{classaz_1_1Function}{}\doxysection{az\+::Function Class Reference}
+\label{classaz_1_1Function}\index{az::Function@{az::Function}}
+
+
+{\ttfamily \#include $<$azmath.\+h$>$}
+
+Inheritance diagram for az\+::Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classaz_1_1Function}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classaz_1_1Function_afc308a0b42f92dbfcb2748ced8d86611}{$\sim$\+Function}} ()=default
+\item 
+virtual double \mbox{\hyperlink{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}{calc\+\_\+value}} (double x)
+\item 
+void \mbox{\hyperlink{classaz_1_1Function_aca890775c9696e22826de224688e22c5}{start}} (const std\+::string \&expr)
+\item 
+void \mbox{\hyperlink{classaz_1_1Function_a0c62c04ae27309b93a91fd691e430990}{create\+\_\+function}} (std\+::string expression, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&sub\+\_\+expr, std\+::vector$<$ char $>$ \&signs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\+\_\+sub\+\_\+expr}} (double x)
+\item 
+double \mbox{\hyperlink{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}{eval\+\_\+right}} (double x)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classaz_1_1Function_ade7b11031c35113b920e0612bb794e3c}{brackets\+\_\+find\+\_\+end}} (std\+::string expr)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a148d02c11fe47ca35b59715496afbf19}{add\+\_\+two\+\_\+arg\+\_\+func}} (size\+\_\+t \&i, size\+\_\+t sign\+\_\+pos, std\+::string expression, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&container)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_acce6373dee8ad4f7d9cc3a93d3dfc92f}{find\+\_\+numbers}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_aeb21dd3cd07e39279f0ec334a038f11b}{extract\+\_\+x}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a23e72d5ea2189f097dc506f9f7931cd5}{extract\+\_\+brackets}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_ab8948c5ec498de802ebfe6519410693f}{extract\+\_\+sine}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_aaf8cef54fd5f07b229b75445d1d34d07}{extract\+\_\+cosine}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a88fb5bb3582b2a5d091dc9ebc1738c64}{extract\+\_\+tangent}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_ac5c1cf63f95861c55f4023c6f3199b35}{extract\+\_\+cot}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_adbf7c4af64673b859d26388a720a2fe8}{extract\+\_\+asin}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a0cbd536585656f1fe42c061a5bdc9853}{extract\+\_\+acos}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a5061b1c8dd4770e676034aa7a5caaa11}{extract\+\_\+atan}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a146ee9e162210b5db0a8cd941c0a7833}{extract\+\_\+acot}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a47b5f172fb9f8fb3b5fff42e93bd3425}{extract\+\_\+ln}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_af5830c0d925946fa8a911cc94ed92837}{extract\+\_\+lg}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a224520c08de386b2ec6158829e83fa9f}{extract\+\_\+log}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\item 
+static void \mbox{\hyperlink{classaz_1_1Function_a01b64f83443050afe27dcf47ef66903d}{extract\+\_\+sqrt}} (size\+\_\+t \&i, std\+::string \&expr, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&funcs, std\+::vector$<$ char $>$ \&signs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classaz_1_1Function_a4f1ce81f244ca9cb7ff91cf2865c21f4}{c}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \mbox{\hyperlink{classaz_1_1Function_a4eccbefc5d527b1e2446c7cf7b307ac2}{sub\+\_\+expressions\+\_\+}}
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classaz_1_1Function_a1bedc39e22070930371a51cf8070c2df}{signs\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \mbox{\hyperlink{classaz_1_1Function_aad52b8610b87bc31dfd48898414e78a1}{after\+\_\+power\+\_\+}}
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{classaz_1_1Function_a73cb3edfb65bca61c7b713123375edf3}{right\+\_\+signs\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classaz_1_1Function}{Function}} is an interface for all standard mathematics functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaz_1_1Function_afc308a0b42f92dbfcb2748ced8d86611}\label{classaz_1_1Function_afc308a0b42f92dbfcb2748ced8d86611}} 
+\index{az::Function@{az::Function}!````~Function@{$\sim$Function}}
+\index{````~Function@{$\sim$Function}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{$\sim$Function()}{~Function()}}
+{\footnotesize\ttfamily virtual az\+::\+Function\+::$\sim$\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaz_1_1Function_a148d02c11fe47ca35b59715496afbf19}\label{classaz_1_1Function_a148d02c11fe47ca35b59715496afbf19}} 
+\index{az::Function@{az::Function}!add\_two\_arg\_func@{add\_two\_arg\_func}}
+\index{add\_two\_arg\_func@{add\_two\_arg\_func}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{add\_two\_arg\_func()}{add\_two\_arg\_func()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::add\+\_\+two\+\_\+arg\+\_\+func (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{size\+\_\+t}]{sign\+\_\+pos,  }\item[{std\+::string}]{expression,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to handle two argument functions. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Current position in expression. \\
+\hline
+{\em sign\+\_\+pos} & Multi function symbol\textquotesingle{}s position. \\
+\hline
+{\em expression} & Expression from which we are extracting function. \\
+\hline
+{\em container} & Container where functions will be stored (sub\+\_\+expressions\+\_\+ or after\+\_\+power\+\_\+) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_ade7b11031c35113b920e0612bb794e3c}\label{classaz_1_1Function_ade7b11031c35113b920e0612bb794e3c}} 
+\index{az::Function@{az::Function}!brackets\_find\_end@{brackets\_find\_end}}
+\index{brackets\_find\_end@{brackets\_find\_end}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{brackets\_find\_end()}{brackets\_find\_end()}}
+{\footnotesize\ttfamily size\+\_\+t az\+::\+Function\+::brackets\+\_\+find\+\_\+end (\begin{DoxyParamCaption}\item[{std\+::string}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Finds end of first bracket in expr. Used in making functions which use brackets. Assumes that first character of expr is \textquotesingle{}(\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression from which we want to get position of the closing bracket. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Position of the closing bracket. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}\label{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}} 
+\index{az::Function@{az::Function}!calc\_value@{calc\_value}}
+\index{calc\_value@{calc\_value}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{calc\_value()}{calc\_value()}}
+{\footnotesize\ttfamily virtual double az\+::\+Function\+::calc\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Virtual function for returning function value. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we evaluate function value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value of certain function. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classaz_1_1Brackets_ae69e41d6cbd3f1fc04b04e66880f671f}{az\+::\+Brackets}}, \mbox{\hyperlink{classaz_1_1Sin_ab4bfe319a9eabfd0766bbe4d2cfd4734}{az\+::\+Sin}}, \mbox{\hyperlink{classaz_1_1Cos_a56d62cc9923b985209dc0894c83235e4}{az\+::\+Cos}}, \mbox{\hyperlink{classaz_1_1Tan_abd3d6a96f652ce9d0e337845863a8746}{az\+::\+Tan}}, \mbox{\hyperlink{classaz_1_1Cot_ab5b7ac4e0c8c56daca5803a90e80f965}{az\+::\+Cot}}, \mbox{\hyperlink{classaz_1_1Asin_af1e81e34c3aab90c68a14cf9588be926}{az\+::\+Asin}}, \mbox{\hyperlink{classaz_1_1Acos_a3df12551860cbdfd47da01561f8ccae7}{az\+::\+Acos}}, \mbox{\hyperlink{classaz_1_1Atan_ad1a047328c123c00165e9be116a9ad07}{az\+::\+Atan}}, \mbox{\hyperlink{classaz_1_1Acot_a0e5bf658214c38e0f943f0442db080dd}{az\+::\+Acot}}, \mbox{\hyperlink{classaz_1_1Power_ac56cab24e921f2883d6297924087dd4a}{az\+::\+Power}}, \mbox{\hyperlink{classaz_1_1Ln_a3d85818b7b321f4b66bf90803aca0d63}{az\+::\+Ln}}, \mbox{\hyperlink{classaz_1_1Lg_a542ca32f291ceb2e1604beda8080ec7d}{az\+::\+Lg}}, \mbox{\hyperlink{classaz_1_1Log_a27fb4f45fc38566e5fc24fd3db6c31ce}{az\+::\+Log}}, \mbox{\hyperlink{classaz_1_1Sqrt_aecfa930405aaaaece12ffebfa68f8033}{az\+::\+Sqrt}}, \mbox{\hyperlink{classaz_1_1Multiply_a3f3eaf73dd1a31b4f81ed96f2433b7ac}{az\+::\+Multiply}}, \mbox{\hyperlink{classaz_1_1Divide_acf9447fc3a036e44873f5eed2390fd36}{az\+::\+Divide}}, and \mbox{\hyperlink{classaz_1_1Const_a37bea3d814059aad929b90aa0b658960}{az\+::\+Const}}.
+
+\mbox{\Hypertarget{classaz_1_1Function_a0c62c04ae27309b93a91fd691e430990}\label{classaz_1_1Function_a0c62c04ae27309b93a91fd691e430990}} 
+\index{az::Function@{az::Function}!create\_function@{create\_function}}
+\index{create\_function@{create\_function}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{create\_function()}{create\_function()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::create\+\_\+function (\begin{DoxyParamCaption}\item[{std\+::string}]{expression,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{sub\+\_\+expr,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} interpreting given expression. 
+\begin{DoxyParams}{Parameters}
+{\em expression} & Expression which is turned into function. \\
+\hline
+{\em sub\+\_\+expr} & Vector where subexpressions will be placed. \\
+\hline
+{\em signs} & Vector where signs will be placed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}\label{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}} 
+\index{az::Function@{az::Function}!eval\_right@{eval\_right}}
+\index{eval\_right@{eval\_right}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{eval\_right()}{eval\_right()}}
+{\footnotesize\ttfamily double az\+::\+Function\+::eval\+\_\+right (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Used only in power function. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we evaluate subexpression. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of all subexpressions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}\label{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}} 
+\index{az::Function@{az::Function}!eval\_sub\_expr@{eval\_sub\_expr}}
+\index{eval\_sub\_expr@{eval\_sub\_expr}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{eval\_sub\_expr()}{eval\_sub\_expr()}}
+{\footnotesize\ttfamily double az\+::\+Function\+::eval\+\_\+sub\+\_\+expr (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we evaluate subexpressions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sum of all sub\+\_\+expressions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaz_1_1Function_a0cbd536585656f1fe42c061a5bdc9853}\label{classaz_1_1Function_a0cbd536585656f1fe42c061a5bdc9853}} 
+\index{az::Function@{az::Function}!extract\_acos@{extract\_acos}}
+\index{extract\_acos@{extract\_acos}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_acos()}{extract\_acos()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+acos (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting arc cosine function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cotangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a146ee9e162210b5db0a8cd941c0a7833}\label{classaz_1_1Function_a146ee9e162210b5db0a8cd941c0a7833}} 
+\index{az::Function@{az::Function}!extract\_acot@{extract\_acot}}
+\index{extract\_acot@{extract\_acot}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_acot()}{extract\_acot()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+acot (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting arc cotangent function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cotangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_adbf7c4af64673b859d26388a720a2fe8}\label{classaz_1_1Function_adbf7c4af64673b859d26388a720a2fe8}} 
+\index{az::Function@{az::Function}!extract\_asin@{extract\_asin}}
+\index{extract\_asin@{extract\_asin}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_asin()}{extract\_asin()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+asin (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting arc sine function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cotangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a5061b1c8dd4770e676034aa7a5caaa11}\label{classaz_1_1Function_a5061b1c8dd4770e676034aa7a5caaa11}} 
+\index{az::Function@{az::Function}!extract\_atan@{extract\_atan}}
+\index{extract\_atan@{extract\_atan}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_atan()}{extract\_atan()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+atan (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting arc tangent function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cotangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a23e72d5ea2189f097dc506f9f7931cd5}\label{classaz_1_1Function_a23e72d5ea2189f097dc506f9f7931cd5}} 
+\index{az::Function@{az::Function}!extract\_brackets@{extract\_brackets}}
+\index{extract\_brackets@{extract\_brackets}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_brackets()}{extract\_brackets()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+brackets (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting brackets function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which brackets are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_aaf8cef54fd5f07b229b75445d1d34d07}\label{classaz_1_1Function_aaf8cef54fd5f07b229b75445d1d34d07}} 
+\index{az::Function@{az::Function}!extract\_cosine@{extract\_cosine}}
+\index{extract\_cosine@{extract\_cosine}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_cosine()}{extract\_cosine()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+cosine (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting cosine function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cosine are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_ac5c1cf63f95861c55f4023c6f3199b35}\label{classaz_1_1Function_ac5c1cf63f95861c55f4023c6f3199b35}} 
+\index{az::Function@{az::Function}!extract\_cot@{extract\_cot}}
+\index{extract\_cot@{extract\_cot}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_cot()}{extract\_cot()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+cot (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting cotangent function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which cotangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_af5830c0d925946fa8a911cc94ed92837}\label{classaz_1_1Function_af5830c0d925946fa8a911cc94ed92837}} 
+\index{az::Function@{az::Function}!extract\_lg@{extract\_lg}}
+\index{extract\_lg@{extract\_lg}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_lg()}{extract\_lg()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+lg (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting binary logarithm function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which binary logarithm are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a47b5f172fb9f8fb3b5fff42e93bd3425}\label{classaz_1_1Function_a47b5f172fb9f8fb3b5fff42e93bd3425}} 
+\index{az::Function@{az::Function}!extract\_ln@{extract\_ln}}
+\index{extract\_ln@{extract\_ln}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_ln()}{extract\_ln()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+ln (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting natural logarithm function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which natural logarithm are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a224520c08de386b2ec6158829e83fa9f}\label{classaz_1_1Function_a224520c08de386b2ec6158829e83fa9f}} 
+\index{az::Function@{az::Function}!extract\_log@{extract\_log}}
+\index{extract\_log@{extract\_log}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_log()}{extract\_log()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+log (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting common logarithm function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which common logarithm are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_ab8948c5ec498de802ebfe6519410693f}\label{classaz_1_1Function_ab8948c5ec498de802ebfe6519410693f}} 
+\index{az::Function@{az::Function}!extract\_sine@{extract\_sine}}
+\index{extract\_sine@{extract\_sine}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_sine()}{extract\_sine()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+sine (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting sine function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which sine are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a01b64f83443050afe27dcf47ef66903d}\label{classaz_1_1Function_a01b64f83443050afe27dcf47ef66903d}} 
+\index{az::Function@{az::Function}!extract\_sqrt@{extract\_sqrt}}
+\index{extract\_sqrt@{extract\_sqrt}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_sqrt()}{extract\_sqrt()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+sqrt (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting square root from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which common logarithm are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_a88fb5bb3582b2a5d091dc9ebc1738c64}\label{classaz_1_1Function_a88fb5bb3582b2a5d091dc9ebc1738c64}} 
+\index{az::Function@{az::Function}!extract\_tangent@{extract\_tangent}}
+\index{extract\_tangent@{extract\_tangent}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_tangent()}{extract\_tangent()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+tangent (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to extracting tangent function from expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression from which tangent are extracted. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_aeb21dd3cd07e39279f0ec334a038f11b}\label{classaz_1_1Function_aeb21dd3cd07e39279f0ec334a038f11b}} 
+\index{az::Function@{az::Function}!extract\_x@{extract\_x}}
+\index{extract\_x@{extract\_x}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{extract\_x()}{extract\_x()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::extract\+\_\+x (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to finding x in expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression where numbers are searched. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_acce6373dee8ad4f7d9cc3a93d3dfc92f}\label{classaz_1_1Function_acce6373dee8ad4f7d9cc3a93d3dfc92f}} 
+\index{az::Function@{az::Function}!find\_numbers@{find\_numbers}}
+\index{find\_numbers@{find\_numbers}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{find\_numbers()}{find\_numbers()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::find\+\_\+numbers (\begin{DoxyParamCaption}\item[{size\+\_\+t \&}]{i,  }\item[{std\+::string \&}]{expr,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classaz_1_1Function}{Function}} $>$ $>$ \&}]{funcs,  }\item[{std\+::vector$<$ char $>$ \&}]{signs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} to finding numbers in expression. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Expression iterator. \\
+\hline
+{\em expr} & Expression where numbers are searched. \\
+\hline
+{\em funcs} & Vector to which subexpressions will be added. \\
+\hline
+{\em signs} & Vector to which signs will be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaz_1_1Function_aca890775c9696e22826de224688e22c5}\label{classaz_1_1Function_aca890775c9696e22826de224688e22c5}} 
+\index{az::Function@{az::Function}!start@{start}}
+\index{start@{start}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void az\+::\+Function\+::start (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{classaz_1_1Function}{Function}} used to start evaluation. 
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression which is turned into function. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classaz_1_1Function_aad52b8610b87bc31dfd48898414e78a1}\label{classaz_1_1Function_aad52b8610b87bc31dfd48898414e78a1}} 
+\index{az::Function@{az::Function}!after\_power\_@{after\_power\_}}
+\index{after\_power\_@{after\_power\_}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{after\_power\_}{after\_power\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classaz_1_1Function}{Function}}$>$ $>$ az\+::\+Function\+::after\+\_\+power\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Contains subexpressions which occurs after power sign. Used only in two arguments function. \mbox{\Hypertarget{classaz_1_1Function_a4f1ce81f244ca9cb7ff91cf2865c21f4}\label{classaz_1_1Function_a4f1ce81f244ca9cb7ff91cf2865c21f4}} 
+\index{az::Function@{az::Function}!c@{c}}
+\index{c@{c}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily double az\+::\+Function\+::c\hspace{0.3cm}{\ttfamily [protected]}}
+
+Constant value. Only used in constant function. \mbox{\Hypertarget{classaz_1_1Function_a73cb3edfb65bca61c7b713123375edf3}\label{classaz_1_1Function_a73cb3edfb65bca61c7b713123375edf3}} 
+\index{az::Function@{az::Function}!right\_signs\_@{right\_signs\_}}
+\index{right\_signs\_@{right\_signs\_}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{right\_signs\_}{right\_signs\_}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ az\+::\+Function\+::right\+\_\+signs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of signs preceding sub\+\_\+expressions after power symbol. Used only in two arguments function. \mbox{\Hypertarget{classaz_1_1Function_a1bedc39e22070930371a51cf8070c2df}\label{classaz_1_1Function_a1bedc39e22070930371a51cf8070c2df}} 
+\index{az::Function@{az::Function}!signs\_@{signs\_}}
+\index{signs\_@{signs\_}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{signs\_}{signs\_}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ az\+::\+Function\+::signs\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of signs preceding sub\+\_\+expressions. \mbox{\Hypertarget{classaz_1_1Function_a4eccbefc5d527b1e2446c7cf7b307ac2}\label{classaz_1_1Function_a4eccbefc5d527b1e2446c7cf7b307ac2}} 
+\index{az::Function@{az::Function}!sub\_expressions\_@{sub\_expressions\_}}
+\index{sub\_expressions\_@{sub\_expressions\_}!az::Function@{az::Function}}
+\doxysubsubsection{\texorpdfstring{sub\_expressions\_}{sub\_expressions\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classaz_1_1Function}{Function}}$>$ $>$ az\+::\+Function\+::sub\+\_\+expressions\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Contains other expressions necessary to calculate function\textquotesingle{}s value. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{azmath_8h}{azmath.\+h}}\item 
+\mbox{\hyperlink{azmath_8cpp}{azmath.\+cpp}}\end{DoxyCompactItemize}

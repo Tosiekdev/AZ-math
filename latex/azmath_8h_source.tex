@@ -1,0 +1,221 @@
+\hypertarget{azmath_8h_source}{}\doxysection{azmath.\+h}
+\mbox{\hyperlink{azmath_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef AZ\_MATH\_AZMATH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define AZ\_MATH\_AZMATH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceaz}{az}}\{}
+\DoxyCodeLine{13     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceaz_a72750bef6c475582db7393c04f2f77d0}{PI}}=3.1415926535897932;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{namespaceaz_a22b0368f1056aafe00c80714eb9bcddd}{E}}=2.7182818284590452;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1OutOfDomain}{OutOfDomain}} : \textcolor{keyword}{public} std::exception\{}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26          [[nodiscard]] \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classaz_1_1OutOfDomain_aed4aee7e23319650564ec4c04bb0910a}{what}}() const noexcept\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}Argument out of domain!"{}}; \}}
+\DoxyCodeLine{27     \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{33     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{37         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Function_a4f1ce81f244ca9cb7ff91cf2865c21f4}{c}};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42         std::vector<std::unique\_ptr<Function>> \mbox{\hyperlink{classaz_1_1Function_a4eccbefc5d527b1e2446c7cf7b307ac2}{sub\_expressions\_}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{47         std::vector<char> \mbox{\hyperlink{classaz_1_1Function_a1bedc39e22070930371a51cf8070c2df}{signs\_}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52         std::vector<std::unique\_ptr<Function>> \mbox{\hyperlink{classaz_1_1Function_aad52b8610b87bc31dfd48898414e78a1}{after\_power\_}};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{57         std::vector<char> \mbox{\hyperlink{classaz_1_1Function_a73cb3edfb65bca61c7b713123375edf3}{right\_signs\_}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(\textcolor{keywordtype}{double} x);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{70         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}{eval\_right}}(\textcolor{keywordtype}{double} x);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{78         \textcolor{keyword}{static} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classaz_1_1Function_ade7b11031c35113b920e0612bb794e3c}{brackets\_find\_end}}(std::string expr);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a148d02c11fe47ca35b59715496afbf19}{add\_two\_arg\_func}}(\textcolor{keywordtype}{size\_t} \&i, \textcolor{keywordtype}{size\_t} sign\_pos, std::string expression,}
+\DoxyCodeLine{88                               std::vector<std::unique\_ptr<Function>> \&container);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{97         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_acce6373dee8ad4f7d9cc3a93d3dfc92f}{find\_numbers}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{98                           std::vector<char> \&signs);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{107         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_aeb21dd3cd07e39279f0ec334a038f11b}{extract\_x}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{108                               std::vector<char> \&signs);}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{117         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a23e72d5ea2189f097dc506f9f7931cd5}{extract\_brackets}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{118                               std::vector<char> \&signs);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{127         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_ab8948c5ec498de802ebfe6519410693f}{extract\_sine}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{128                                  std::vector<char> \&signs);}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{137         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_aaf8cef54fd5f07b229b75445d1d34d07}{extract\_cosine}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{138                                    std::vector<char> \&signs);}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{147         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a88fb5bb3582b2a5d091dc9ebc1738c64}{extract\_tangent}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{148                                     std::vector<char> \&signs);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{157         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_ac5c1cf63f95861c55f4023c6f3199b35}{extract\_cot}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{158                                 std::vector<char> \&signs);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{167         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_adbf7c4af64673b859d26388a720a2fe8}{extract\_asin}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{168                                  std::vector<char> \&signs);}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{177         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a0cbd536585656f1fe42c061a5bdc9853}{extract\_acos}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{178                                  std::vector<char> \&signs);}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{187         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a5061b1c8dd4770e676034aa7a5caaa11}{extract\_atan}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{188                                  std::vector<char> \&signs);}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{197         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a146ee9e162210b5db0a8cd941c0a7833}{extract\_acot}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{198                                  std::vector<char> \&signs);}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{207         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a47b5f172fb9f8fb3b5fff42e93bd3425}{extract\_ln}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{208                                std::vector<char> \&signs);}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{217         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_af5830c0d925946fa8a911cc94ed92837}{extract\_lg}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{218                                std::vector<char> \&signs);}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{227         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a224520c08de386b2ec6158829e83fa9f}{extract\_log}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{228                                 std::vector<char> \&signs);}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{237         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a01b64f83443050afe27dcf47ef66903d}{extract\_sqrt}}(\textcolor{keywordtype}{size\_t} \&i, std::string \&expr, std::vector<std::unique\_ptr<Function>> \&funcs,}
+\DoxyCodeLine{238                                  std::vector<char> \&signs);}
+\DoxyCodeLine{239     \textcolor{keyword}{public}:}
+\DoxyCodeLine{243         \textcolor{keyword}{virtual} \mbox{\hyperlink{classaz_1_1Function_afc308a0b42f92dbfcb2748ced8d86611}{\string~Function}}()=\textcolor{keywordflow}{default};}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{250         \textcolor{keyword}{virtual} \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}{calc\_value}}(\textcolor{keywordtype}{double} x) \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x); \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{256         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_aca890775c9696e22826de224688e22c5}{start}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{264         \textcolor{keywordtype}{void} \mbox{\hyperlink{classaz_1_1Function_a0c62c04ae27309b93a91fd691e430990}{create\_function}}(std::string expression, std::vector<std::unique\_ptr<Function>> \&sub\_expr,}
+\DoxyCodeLine{265                              std::vector<char> \&signs);}
+\DoxyCodeLine{266     \};}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{272     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Brackets}{Brackets}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{273     \textcolor{keyword}{public}:}
+\DoxyCodeLine{278         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Brackets_a410370c63a219411e586b6252e5a2eca}{Brackets}}(std::string expression);}
+\DoxyCodeLine{283         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Brackets_ae69e41d6cbd3f1fc04b04e66880f671f}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{\textcolor{keywordflow}{return} \mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x);\}}
+\DoxyCodeLine{284     \};}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{289     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Sin}{Sin}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{290     \textcolor{keyword}{public}:}
+\DoxyCodeLine{295         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Sin_a648541d0c903bbb57df5b831129e5f2b}{Sin}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{300         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Sin_ab4bfe319a9eabfd0766bbe4d2cfd4734}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} sin(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)); \}}
+\DoxyCodeLine{301     \};}
+\DoxyCodeLine{302 }
+\DoxyCodeLine{306     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Cos}{Cos}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{307     \textcolor{keyword}{public}:}
+\DoxyCodeLine{312         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Cos_a46b0d01662bcbdbe60e51b903200a126}{Cos}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{317         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Cos_a56d62cc9923b985209dc0894c83235e4}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} cos(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)); \}}
+\DoxyCodeLine{318     \};}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{323     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Tan}{Tan}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{324     \textcolor{keyword}{public}:}
+\DoxyCodeLine{329         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Tan_ae442d4f4bd0924c99dd71acb38a6c3d5}{Tan}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{334         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Tan_abd3d6a96f652ce9d0e337845863a8746}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} tan(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)); \}}
+\DoxyCodeLine{335     \};}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{340     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Cot}{Cot}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{341     \textcolor{keyword}{public}:}
+\DoxyCodeLine{346         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Cot_a75dda4632104bb22277d6d2cb642a006}{Cot}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{353         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Cot_ab5b7ac4e0c8c56daca5803a90e80f965}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{354     \};}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{359     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Asin}{Asin}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{360     \textcolor{keyword}{public}:}
+\DoxyCodeLine{365         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Asin_a59ca4cf4befb765999eddf28f2375224}{Asin}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{372         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Asin_af1e81e34c3aab90c68a14cf9588be926}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{373     \};}
+\DoxyCodeLine{374 }
+\DoxyCodeLine{378     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Acos}{Acos}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{379     \textcolor{keyword}{public}:}
+\DoxyCodeLine{384         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Acos_a5d6ee0742277ef6f3a401f4a31208b87}{Acos}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{385 }
+\DoxyCodeLine{391         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Acos_a3df12551860cbdfd47da01561f8ccae7}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{392     \};}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{397     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Atan}{Atan}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{398     \textcolor{keyword}{public}:}
+\DoxyCodeLine{403         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Atan_a98eee09f980bd7e33e5e4aeda1dc20e4}{Atan}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{409         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Atan_ad1a047328c123c00165e9be116a9ad07}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} atan(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)); \};}
+\DoxyCodeLine{410     \};}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{415     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Acot}{Acot}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{416     \textcolor{keyword}{public}:}
+\DoxyCodeLine{421         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Acot_aed056421f2e9b70649e1a90b036507f3}{Acot}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{427         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Acot_a0e5bf658214c38e0f943f0442db080dd}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{namespaceaz_a72750bef6c475582db7393c04f2f77d0}{PI}}/2-\/atan(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)); \};}
+\DoxyCodeLine{428     \};}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{434     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Power}{Power}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{435     \textcolor{keyword}{public}:}
+\DoxyCodeLine{441         \mbox{\hyperlink{classaz_1_1Power_a73c7451052b5305611e89e5e53c113a1}{Power}}(\textcolor{keyword}{const} std::string\& expr, \textcolor{keywordtype}{size\_t} power\_pos);}
+\DoxyCodeLine{446         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Power_ac56cab24e921f2883d6297924087dd4a}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} pow(\mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x), \mbox{\hyperlink{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}{eval\_right}}(x)); \}}
+\DoxyCodeLine{447     \};}
+\DoxyCodeLine{448 }
+\DoxyCodeLine{452     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Ln}{Ln}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{453     \textcolor{keyword}{public}:}
+\DoxyCodeLine{458         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Ln_a5260b83a5e52edfa76bb23454cc42995}{Ln}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{465         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Ln_a3d85818b7b321f4b66bf90803aca0d63}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{466     \};}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{471     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Lg}{Lg}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{472     \textcolor{keyword}{public}:}
+\DoxyCodeLine{477          \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Lg_adcdbb211463a28fa5bd7012b190220f5}{Lg}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{484         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Lg_a542ca32f291ceb2e1604beda8080ec7d}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{485     \};}
+\DoxyCodeLine{486 }
+\DoxyCodeLine{490     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Log}{Log}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{491     \textcolor{keyword}{public}:}
+\DoxyCodeLine{496         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Log_a532b7fcaa5a660456829451c2d77387a}{Log}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{497 }
+\DoxyCodeLine{503         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Log_a27fb4f45fc38566e5fc24fd3db6c31ce}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{504     \};}
+\DoxyCodeLine{505 }
+\DoxyCodeLine{509     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Sqrt}{Sqrt}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{510     \textcolor{keyword}{public}:}
+\DoxyCodeLine{515         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Sqrt_af9de6e642deb58daf59b81172f7021b4}{Sqrt}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{522         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Sqrt_aecfa930405aaaaece12ffebfa68f8033}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{523     \};}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{528     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Multiply}{Multiply}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{529     \textcolor{keyword}{public}:}
+\DoxyCodeLine{535         \mbox{\hyperlink{classaz_1_1Multiply_a4ca0860e63da97fe09b7c0a97546595c}{Multiply}}(\textcolor{keyword}{const} std::string\& expr, \textcolor{keywordtype}{size\_t} mult\_pos);}
+\DoxyCodeLine{540         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Multiply_a3f3eaf73dd1a31b4f81ed96f2433b7ac}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classaz_1_1Function_ae56cae63137c96de612e860f5e6ee451}{eval\_sub\_expr}}(x)*\mbox{\hyperlink{classaz_1_1Function_a9eb56ddbcf15822befd5581bdbe9867a}{eval\_right}}(x); \};}
+\DoxyCodeLine{541     \};}
+\DoxyCodeLine{542 }
+\DoxyCodeLine{546     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Divide}{Divide}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{547     \textcolor{keyword}{public}:}
+\DoxyCodeLine{553         \mbox{\hyperlink{classaz_1_1Divide_a44140614e0a01695c34dafe518178ce8}{Divide}}(\textcolor{keyword}{const} std::string\& expr, \textcolor{keywordtype}{size\_t} div\_pos);}
+\DoxyCodeLine{559         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Divide_acf9447fc3a036e44873f5eed2390fd36}{calc\_value}}(\textcolor{keywordtype}{double} x) \textcolor{keyword}{override};}
+\DoxyCodeLine{560     \};}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{565     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1Const}{Const}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{566     \textcolor{keyword}{public}:}
+\DoxyCodeLine{571         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Const_a9edc4ccf98fdf65c199541ea1c933908}{Const}}(\textcolor{keyword}{const} std::string\& expr);}
+\DoxyCodeLine{572 }
+\DoxyCodeLine{577         \textcolor{keyword}{explicit} \mbox{\hyperlink{classaz_1_1Const_a9edc4ccf98fdf65c199541ea1c933908}{Const}}(\textcolor{keywordtype}{double} x);}
+\DoxyCodeLine{578 }
+\DoxyCodeLine{583         \textcolor{keywordtype}{double} \mbox{\hyperlink{classaz_1_1Const_a37bea3d814059aad929b90aa0b658960}{calc\_value}}(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classaz_1_1Function_a4f1ce81f244ca9cb7ff91cf2865c21f4}{c}}; \};}
+\DoxyCodeLine{584     \};}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{589     \textcolor{keyword}{class }\mbox{\hyperlink{classaz_1_1X}{X}} : \textcolor{keyword}{public} \mbox{\hyperlink{classaz_1_1Function}{Function}}\{}
+\DoxyCodeLine{594         \textcolor{keywordtype}{double} calc\_value(\textcolor{keywordtype}{double} x)\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} x; \}}
+\DoxyCodeLine{595     \};}
+\DoxyCodeLine{596 \}}
+\DoxyCodeLine{597 }
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//AZ\_MATH\_AZMATH\_H}}
+
+\end{DoxyCode}

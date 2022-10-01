@@ -1,0 +1,64 @@
+\hypertarget{classaz_1_1Lg}{}\doxysection{az\+::Lg Class Reference}
+\label{classaz_1_1Lg}\index{az::Lg@{az::Lg}}
+
+
+{\ttfamily \#include $<$azmath.\+h$>$}
+
+Inheritance diagram for az\+::Lg\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaz_1_1Lg}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaz_1_1Lg_adcdbb211463a28fa5bd7012b190220f5}{Lg}} (const std\+::string \&expr)
+\item 
+double \mbox{\hyperlink{classaz_1_1Lg_a542ca32f291ceb2e1604beda8080ec7d}{calc\+\_\+value}} (double x) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing binary (base 2) logarithm. Can calculate binary logarithm of expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaz_1_1Lg_adcdbb211463a28fa5bd7012b190220f5}\label{classaz_1_1Lg_adcdbb211463a28fa5bd7012b190220f5}} 
+\index{az::Lg@{az::Lg}!Lg@{Lg}}
+\index{Lg@{Lg}!az::Lg@{az::Lg}}
+\doxysubsubsection{\texorpdfstring{Lg()}{Lg()}}
+{\footnotesize\ttfamily az\+::\+Lg\+::\+Lg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression from which function is created. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaz_1_1Lg_a542ca32f291ceb2e1604beda8080ec7d}\label{classaz_1_1Lg_a542ca32f291ceb2e1604beda8080ec7d}} 
+\index{az::Lg@{az::Lg}!calc\_value@{calc\_value}}
+\index{calc\_value@{calc\_value}!az::Lg@{az::Lg}}
+\doxysubsubsection{\texorpdfstring{calc\_value()}{calc\_value()}}
+{\footnotesize\ttfamily double az\+::\+Lg\+::calc\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Throws expression if value of evaluated subexpression isn\textquotesingle{}t in interval (0, +inf). 
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we evaluate function value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Binary logarithm of subexpressions. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}{az\+::\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{azmath_8h}{azmath.\+h}}\item 
+\mbox{\hyperlink{azmath_8cpp}{azmath.\+cpp}}\end{DoxyCompactItemize}

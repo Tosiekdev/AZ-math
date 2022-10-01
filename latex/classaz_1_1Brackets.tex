@@ -1,0 +1,64 @@
+\hypertarget{classaz_1_1Brackets}{}\doxysection{az\+::Brackets Class Reference}
+\label{classaz_1_1Brackets}\index{az::Brackets@{az::Brackets}}
+
+
+{\ttfamily \#include $<$azmath.\+h$>$}
+
+Inheritance diagram for az\+::Brackets\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaz_1_1Brackets}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaz_1_1Brackets_a410370c63a219411e586b6252e5a2eca}{Brackets}} (std\+::string expression)
+\item 
+double \mbox{\hyperlink{classaz_1_1Brackets_ae69e41d6cbd3f1fc04b04e66880f671f}{calc\+\_\+value}} (double x) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing bracket. Used only to calculate value of bracket not preceded by any function, or preceded only by power operator. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaz_1_1Brackets_a410370c63a219411e586b6252e5a2eca}\label{classaz_1_1Brackets_a410370c63a219411e586b6252e5a2eca}} 
+\index{az::Brackets@{az::Brackets}!Brackets@{Brackets}}
+\index{Brackets@{Brackets}!az::Brackets@{az::Brackets}}
+\doxysubsubsection{\texorpdfstring{Brackets()}{Brackets()}}
+{\footnotesize\ttfamily az\+::\+Brackets\+::\+Brackets (\begin{DoxyParamCaption}\item[{std\+::string}]{expression }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor 
+\begin{DoxyParams}{Parameters}
+{\em expression} & Expression from which we will make function contained in brackets. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaz_1_1Brackets_ae69e41d6cbd3f1fc04b04e66880f671f}\label{classaz_1_1Brackets_ae69e41d6cbd3f1fc04b04e66880f671f}} 
+\index{az::Brackets@{az::Brackets}!calc\_value@{calc\_value}}
+\index{calc\_value@{calc\_value}!az::Brackets@{az::Brackets}}
+\doxysubsubsection{\texorpdfstring{calc\_value()}{calc\_value()}}
+{\footnotesize\ttfamily double az\+::\+Brackets\+::calc\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we calculate value in brackets. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluated value of subexpressions in brackets. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}{az\+::\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{azmath_8h}{azmath.\+h}}\item 
+\mbox{\hyperlink{azmath_8cpp}{azmath.\+cpp}}\end{DoxyCompactItemize}

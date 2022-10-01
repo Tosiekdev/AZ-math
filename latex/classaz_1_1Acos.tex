@@ -1,0 +1,64 @@
+\hypertarget{classaz_1_1Acos}{}\doxysection{az\+::Acos Class Reference}
+\label{classaz_1_1Acos}\index{az::Acos@{az::Acos}}
+
+
+{\ttfamily \#include $<$azmath.\+h$>$}
+
+Inheritance diagram for az\+::Acos\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classaz_1_1Acos}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classaz_1_1Acos_a5d6ee0742277ef6f3a401f4a31208b87}{Acos}} (const std\+::string \&expr)
+\item 
+double \mbox{\hyperlink{classaz_1_1Acos_a3df12551860cbdfd47da01561f8ccae7}{calc\+\_\+value}} (double x) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing arc cosine function. Can calculate arc sine value of expression. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classaz_1_1Acos_a5d6ee0742277ef6f3a401f4a31208b87}\label{classaz_1_1Acos_a5d6ee0742277ef6f3a401f4a31208b87}} 
+\index{az::Acos@{az::Acos}!Acos@{Acos}}
+\index{Acos@{Acos}!az::Acos@{az::Acos}}
+\doxysubsubsection{\texorpdfstring{Acos()}{Acos()}}
+{\footnotesize\ttfamily az\+::\+Acos\+::\+Acos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor; 
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression from which function is created. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classaz_1_1Acos_a3df12551860cbdfd47da01561f8ccae7}\label{classaz_1_1Acos_a3df12551860cbdfd47da01561f8ccae7}} 
+\index{az::Acos@{az::Acos}!calc\_value@{calc\_value}}
+\index{calc\_value@{calc\_value}!az::Acos@{az::Acos}}
+\doxysubsubsection{\texorpdfstring{calc\_value()}{calc\_value()}}
+{\footnotesize\ttfamily double az\+::\+Acos\+::calc\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Throws exception when value of evaluated subexpressions isn\textquotesingle{}t in interval \mbox{[}-\/1,1\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em x} & Argument for which we evaluate function value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Arc cosine value of added subexpressions. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classaz_1_1Function_a2eed526f2a20ffb1c505a87280cccac4}{az\+::\+Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{azmath_8h}{azmath.\+h}}\item 
+\mbox{\hyperlink{azmath_8cpp}{azmath.\+cpp}}\end{DoxyCompactItemize}
