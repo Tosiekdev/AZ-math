@@ -177,6 +177,8 @@ namespace az{
          */
         void create_function(std::string expression, std::vector<std::unique_ptr<Function>> &sub_expr,
                              std::vector<char> &signs);
+
+        friend std::istream& operator>>(std::istream& input, Function &f);
     };
 
     /**

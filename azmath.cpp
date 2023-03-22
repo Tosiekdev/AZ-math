@@ -1,4 +1,3 @@
-
 #include "azmath.h"
 
 #include <utility>
@@ -183,6 +182,14 @@ void az::Function::extract_brackets(size_t &i, std::string &expr, std::vector<st
     }else{
         add_two_arg_func(i,end,expr,funcs);
     }
+}
+
+std::istream &az::operator>>(std::istream &input, az::Function &f) {
+    std::string s;
+    input >> s;
+    f.start(s);
+
+    return input;
 }
 
 template<class T>
