@@ -1,3 +1,4 @@
+
 #include "azmath.h"
 
 #include <utility>
