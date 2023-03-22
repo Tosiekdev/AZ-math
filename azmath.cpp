@@ -1,6 +1,13 @@
 #include "azmath.h"
 
 #include <utility>
+#include <iostream>
+
+void az::Function::parse(const std::string& expr) {
+    for (auto &i:expr) {
+        std::cout << i << std::endl;
+    }
+}
 
 double az::Function::eval_sub_expr(double x){
     double sum=0.0;
