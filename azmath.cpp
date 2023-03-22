@@ -4,10 +4,13 @@
 #include <iostream>
 
 void az::Function::parse(const std::string& expr) {
-    check_parentheses(expr);
+    if (!check_parentheses(expr)) {
+        std::cout << "Bad par";
+    } else {
 
-    for (auto &i:expr) {
-        std::cout << i << std::endl;
+        for (auto &i: expr) {
+            std::cout << i << std::endl;
+        }
     }
 }
 
