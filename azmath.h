@@ -170,6 +170,12 @@ namespace az{
         void start(const std::string& expr);
 
         /**
+         * Function used to translate expression to code.
+         * @param expr Expression to parse.
+         */
+        void parse(const std::string& expr);
+
+        /**
          * Function interpreting given expression.
          * @param expression Expression which is turned into function.
          * @param sub_expr Vector where subexpressions will be placed.
