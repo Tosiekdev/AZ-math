@@ -211,7 +211,7 @@ bool az::Function::check_parentheses(const std::string &expr) {
             parentheses.push(c);
         }
         if (c == ')') {
-            if (c == parentheses.top()-1) {
+            if (parentheses.top() == ')') {
                 parentheses.pop();
             } else {
                 return false;
