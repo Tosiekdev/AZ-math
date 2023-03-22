@@ -4,6 +4,8 @@
 #include <iostream>
 
 void az::Function::parse(const std::string& expr) {
+    check_parentheses(expr);
+
     for (auto &i:expr) {
         std::cout << i << std::endl;
     }
@@ -197,6 +199,24 @@ std::istream &az::operator>>(std::istream &input, az::Function &f) {
     f.start(s);
 
     return input;
+}
+
+bool az::Function::check_parentheses(const std::string &expr) {
+    std::stack<char> parentheses;
+    for (const char& c:expr) {
+        if (c == '(') {
+            parentheses.push(c);
+        }
+        if (c == ')') {
+            if (c == parentheses.top()-1) {
+                parentheses.pop();
+            } else {
+                return false;
+            }
+        }
+    }
+
+    return parentheses.empty();
 }
 
 template<class T>

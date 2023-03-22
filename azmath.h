@@ -150,6 +150,13 @@ namespace az{
         static void extract_4_sign(size_t &i, std::string &expr, std::vector<std::unique_ptr<Function>> &funcs,
                                    std::vector<char> &signs);
 
+        /**
+         * Check's if expressions have proper parentheses.
+         * @param expr Expression to check.
+         * @return If all parentheses are properly closed.
+         */
+        static bool check_parentheses(const std::string& expr);
+
     public:
         /**
           * Virtual destructor.
