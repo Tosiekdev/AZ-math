@@ -1,2 +1,2 @@
 # AZ-math
-Simple library to parse functions.
+Works badly! DO NOT USE! During fixes
